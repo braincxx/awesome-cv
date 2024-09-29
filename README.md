@@ -145,14 +145,14 @@ cmake   -D CMAKE_BUILD_TYPE=RELEASE \
 --   cuDNN:                         YES (ver 8.2.2)
 
 --   Python 3:
---     Interpreter:                 /root/miniconda3/envs/cv_cuda/bin/python (ver 3.10.14)
+--     Interpreter:                 /root/miniconda3/envs/opencv_cuda/bin/python (ver 3.10.14)
 --     Libraries:                   NO
 --     Limited API:                 NO
 --     numpy:                       NO (Python3 wrappers can not be generated)
 --     install path:                -
 -- 
---   Python (for build):            /root/miniconda3/envs/cv_cuda/bin/python
---   Install to:                    /root/miniconda3/envs/cv_cuda
+--   Python (for build):            /root/miniconda3/envs/opencv_cuda/bin/python
+--   Install to:                    /root/miniconda3/envs/opencv_cuda
 ```
 
 #### 5. Compile 
@@ -162,4 +162,17 @@ make install
 
 echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf
 ldconfig
+```
+
+#### A
+* If you got errors:
+  return _bootstrap._gcd_import(name[level:], package, level)
+ImportError: /lib/x86_64-linux-gnu/libp11-kit.so.0: undefined symbol: ffi_type_pointer, version LIBFFI_BASE_7.0
+
+```
+ln -sf /usr/lib/x86_64-linux-gnu/libffi.so.7 $CONDA_PREFIX/lib/libffi.so.7
+```
+* For compatiable cupy version need install from conda
+```
+conda install -c conda-forge cupy
 ```
