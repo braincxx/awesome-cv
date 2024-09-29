@@ -134,3 +134,32 @@ cmake   -D CMAKE_BUILD_TYPE=RELEASE \
         -D WITH_OPENGL=ON \
         -D WITH_GSTREAMER=ON ..
 ```
+
+* Before the compilation you must check configuration summary printed on the screen. (If you have problems with the CUDA Architecture go to the end of the document).
+
+```
+--   NVIDIA CUDA:                   YES (ver 12.2, CUFFT CUBLAS FAST_MATH)
+--     NVIDIA GPU arch:             75
+--     NVIDIA PTX archs:
+-- 
+--   cuDNN:                         YES (ver 8.2.2)
+
+--   Python 3:
+--     Interpreter:                 /root/miniconda3/envs/cv_cuda/bin/python (ver 3.10.14)
+--     Libraries:                   NO
+--     Limited API:                 NO
+--     numpy:                       NO (Python3 wrappers can not be generated)
+--     install path:                -
+-- 
+--   Python (for build):            /root/miniconda3/envs/cv_cuda/bin/python
+--   Install to:                    /root/miniconda3/envs/cv_cuda
+```
+
+#### 5. Compile 
+```
+make -j$(nproc)
+make install
+
+echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf
+ldconfig
+```
