@@ -17,3 +17,16 @@ This section contains instructions for building OpenCV with CUDA support in a Mi
 conda create -n opencv-cuda python=3.10
 conda activate opencv-cuda
 ```
+
+#### 2. Install Necessary Dependencies:
+
+* First of all install update and upgrade your system:
+```bash
+sudo apt update
+sudo apt upgrade
+```
+* Generic tools:
+```bash
+sudo apt install build-essential cmake pkg-config unzip yasm git checkinstall
+sudo apt install libjpeg-dev libpng-dev libtiff-dev
+```
