@@ -1,4 +1,4 @@
-# awesome-cv
+# AWESOME-CV
 
 ## OpenCV with CUDA for Miniconda
 This section contains instructions for building OpenCV with CUDA support in a Miniconda environment. If you need to leverage GPU acceleration for OpenCV on your system, follow this guide to compile OpenCV from source with CUDA enabled
