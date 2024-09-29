@@ -101,3 +101,36 @@ cd opencv-4.10.0
 mkdir build
 cd build
 ```
+
+#### 4. Create Makefile with cmake
+
+* Set CUDA_ARCH_BIN version from https://developer.nvidia.com/cuda-gpus 
+```
+export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/lib/python3.10
+cmake   -D CMAKE_BUILD_TYPE=RELEASE \
+        -D CMAKE_INSTALL_PREFIX=$CONDA_PREFIX \
+        -D OPENCV_EXTRA_MODULES_PATH=~/Downloads/opencv/opencv_contrib-4.10.0/modules \
+        -D PYTHON3_LIBRARY=$CONDA_PREFIX/lib/libpython3.10.so \
+        -D PYTHON3_INCLUDE_DIR=$CONDA_PREFIX/include/python3.10 \
+        -D PYTHON3_EXECUTABLE=$CONDA_PREFIX/bin/python \
+        -D PYTHON3_PACKAGES_PATH=$CONDA_PREFIX/lib/python3.10/site-packages \
+        -D BUILD_opencv_python2=OFF \
+        -D BUILD_opencv_python3=ON \
+        -D INSTALL_PYTHON_EXAMPLES=ON \
+        -D INSTALL_C_EXAMPLES=OFF \
+        -D OPENCV_ENABLE_NONFREE=ON \
+        -D BUILD_EXAMPLES=ON \
+        -D WITH_TBB=ON \
+        -D ENABLE_FAST_MATH=1 \
+        -D CUDA_FAST_MATH=1 \
+        -D WITH_CUBLAS=1 \
+        -D WITH_CUDA=ON \
+        -D BUILD_opencv_cudacodec=ON \
+        -D WITH_CUDNN=ON \
+        -D OPENCV_DNN_CUDA=ON \
+        -D CUDA_ARCH_BIN=7.5 \
+        -D WITH_V4L=ON \
+        -D WITH_QT=OFF \
+        -D WITH_OPENGL=ON \
+        -D WITH_GSTREAMER=ON ..
+```
