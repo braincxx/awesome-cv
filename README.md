@@ -84,3 +84,20 @@ sudo apt-get install libprotobuf-dev protobuf-compiler
 sudo apt-get install libgoogle-glog-dev libgflags-dev
 sudo apt-get install libgphoto2-dev libeigen3-dev libhdf5-dev doxygen
 ```
+
+#### 3. Download and unzip OpenCV
+
+```
+cd ~/ && mkdir Downloads && cd Downloads && mkdir opencv && cd opencv
+wget -O opencv.zip https://github.com/opencv/opencv/archive/refs/tags/4.10.0.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/refs/tags/4.10.0.zip
+
+unzip opencv.zip
+unzip opencv_contrib.zip
+
+pip install numpy
+
+cd opencv-4.10.0
+mkdir build
+cd build
+```
