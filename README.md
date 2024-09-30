@@ -1,4 +1,4 @@
-# AWESOME-CV
+# 🛠️AWESOME-CV
 
 ## OpenCV with CUDA for Miniconda
 This section contains instructions for building OpenCV with CUDA support in a Miniconda environment. If you need to leverage GPU acceleration for OpenCV on your system, follow this guide to compile OpenCV from source with CUDA enabled
@@ -180,3 +180,23 @@ ln -sf /usr/lib/x86_64-linux-gnu/libffi.so.7 $CONDA_PREFIX/lib/libffi.so.7
 ```
 conda install -c conda-forge cupy
 ```
+
+## Contributing
+
+We welcome contributions from the community! If you have a new technique or improvement to suggest:
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/AmazingFeature`
+3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
+4. Push to the branch: `git push origin feature/AmazingFeature`
+5. Open a pull request
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+---
+
+⭐️ If you find this repository helpful, please consider giving it a star!
+
+Keywords: OPENCV CUDA, Computer vision, BUILD OPENCV WITH CUDA FOR MINICONDA, FIX ERROR WHEN BUILDING OPENCV, Machine Learning
