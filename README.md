@@ -15,8 +15,7 @@ This section contains instructions for building OpenCV with CUDA support in a Mi
 ```
 nvidia-smi
 ```
-Result:
-```  
+```
 +---------------------------------------------------------------------------------------+
 | NVIDIA-SMI 535.154.05             Driver Version: 535.154.05   CUDA Version: 12.2     |
 |-----------------------------------------+----------------------+----------------------+
@@ -29,7 +28,6 @@ Result:
 ```
 nvcc --version
 ```
-Result:
 ```
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2023 NVIDIA Corporation
