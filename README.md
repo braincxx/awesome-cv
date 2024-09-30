@@ -35,6 +35,31 @@ Built on Tue_Jun_13_19:16:58_PDT_2023
 Cuda compilation tools, release 12.2, V12.2.91
 Build cuda_12.2.r12.2/compiler.32965470_0
 ```
+Best way for install CUDA-Toolkit with your version - download Installer Type - runfile (local) for example from [here](https://developer.nvidia.com/cuda-12-2-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Debian&target_version=10) 
+```
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ CUDA Installer                                                               │
+│ - [ ] Driver                                                                 │
+│      [ ] 535.54.03                                                           │
+│ + [X] CUDA Toolkit 12.2                                                      │
+│   [ ] CUDA Demo Suite 12.2                                                   │
+│   [ ] CUDA Documentation 12.2                                                │
+│ - [ ] Kernel Objects                                                         │
+│      [ ] nvidia-fs                                                           │
+│   Options                                                                    │
+│   Install                                                                    │
+```
+If after installation you see the wrong version of nvcc, need
+ search right path after - ls /usr/local/cuda
+
+```
+cuda@       cuda-11@    cuda-11.4/  cuda-11.7/  cuda-12.2/
+```
+and export to PATH, best way - add to config ~/.zshrc or just execute command
+```
+export PATH="/usr/local/cuda-12.2/bin:$PATH"
+```
+
 
 ### Steps to Build OpenCV with CUDA Support for Miniconda
 
