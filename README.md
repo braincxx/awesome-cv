@@ -11,6 +11,33 @@ This section contains instructions for building OpenCV with CUDA support in a Mi
 
 ### 
 
+### Check CUDA version and CUDA Toolkit
+```
+nvidia-smi
+```
+Result:
+```  
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.154.05             Driver Version: 535.154.05   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+```
+
+```
+nvcc --version
+```
+Result:
+```
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2023 NVIDIA Corporation
+Built on Tue_Jun_13_19:16:58_PDT_2023
+Cuda compilation tools, release 12.2, V12.2.91
+Build cuda_12.2.r12.2/compiler.32965470_0
+```
+
 ### Steps to Build OpenCV with CUDA Support for Miniconda
 
 #### 1. Create and Activate a Conda Environment
