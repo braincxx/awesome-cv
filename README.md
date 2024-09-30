@@ -14,8 +14,6 @@ This section contains instructions for building OpenCV (version 4.10.0) with CUD
 - CUDA-compatible NVIDIA GPU and CUDA toolkit installed.
 - Build tools (CMake) installed.
 
-### 
-
 ### Check CUDA version and CUDA Toolkit
 ```
 nvidia-smi
@@ -65,6 +63,7 @@ and export to PATH, best way - add to config ~/.zshrc or just execute command
 export PATH="/usr/local/cuda-12.2/bin:$PATH"
 ```
 
+### You can follow the steps or use the [installer](https://github.com/braincxx/awesome-cv/blob/main/scripts/opencv_build.sh) we wrote for your convenience.
 
 ### Steps to Build OpenCV with CUDA Support for Miniconda
 
