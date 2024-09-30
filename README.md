@@ -14,8 +14,8 @@ This section contains instructions for building OpenCV with CUDA support in a Mi
 #### 1. Create and Activate a Conda Environment
 
 ```bash
-conda create -n opencv-cuda python=3.10
-conda activate opencv-cuda
+conda create -n cv_cuda python=3.10
+conda activate cv_cuda
 ```
 
 #### 2. Install Necessary Dependencies
@@ -145,14 +145,16 @@ cmake   -D CMAKE_BUILD_TYPE=RELEASE \
 --   cuDNN:                         YES (ver 8.2.2)
 
 --   Python 3:
---     Interpreter:                 /root/miniconda3/envs/opencv_cuda/bin/python (ver 3.10.14)
---     Libraries:                   NO
+--     Interpreter:                 /root/miniconda3/envs/cv_cuda/bin/python (ver 3.10.14)
+--     Libraries:                   /root/miniconda3/envs/cv_cuda/lib/libpython3.10.so (ver 3.10.14)
 --     Limited API:                 NO
---     numpy:                       NO (Python3 wrappers can not be generated)
---     install path:                -
+--     numpy:                       /root/miniconda3/envs/cv_cuda/lib/python3.10/site-packages/numpy/_core/include (ver 2.1.1)
+--     install path:                /root/miniconda3/envs/cv_cuda/lib/python3.10/site-packages/cv2/python-3.10
 -- 
---   Python (for build):            /root/miniconda3/envs/opencv_cuda/bin/python
---   Install to:                    /root/miniconda3/envs/opencv_cuda
+--   Python (for build):            /root/miniconda3/envs/cv_cuda/bin/python
+
+
+--   Install to:                    /root/miniconda3/envs/cv_cuda
 ```
 
 #### 5. Compile 
@@ -164,7 +166,7 @@ echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf
 ldconfig
 ```
 
-#### A
+#### Notes
 * If you got errors:
   return _bootstrap._gcd_import(name[level:], package, level)
 ImportError: /lib/x86_64-linux-gnu/libp11-kit.so.0: undefined symbol: ffi_type_pointer, version LIBFFI_BASE_7.0
