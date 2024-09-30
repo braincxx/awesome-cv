@@ -168,9 +168,11 @@ ldconfig
 
 #### Notes
 * If you got errors:
+```
   return _bootstrap._gcd_import(name[level:], package, level)
 ImportError: /lib/x86_64-linux-gnu/libp11-kit.so.0: undefined symbol: ffi_type_pointer, version LIBFFI_BASE_7.0
-
+```
+FOR FIX ERROR ENTER COMMAND:
 ```
 ln -sf /usr/lib/x86_64-linux-gnu/libffi.so.7 $CONDA_PREFIX/lib/libffi.so.7
 ```
