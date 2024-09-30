@@ -1,5 +1,10 @@
 # 🛠️AWESOME-CV
 
+## Table of Content
+
+- [AWESOME-CV](#🛠️AWESOME-CV)
+  - [OpenCV with CUDA for Miniconda](#)
+
 ## OpenCV with CUDA for Miniconda
 This section contains instructions for building OpenCV (version 4.10.0) with CUDA support (in guide CUDA and CUDA Toolkit Version 12.2) in a Miniconda environment on Ubuntu 20.04.2 LTS. If you need to leverage GPU acceleration for OpenCV on your system, follow this guide to compile OpenCV from source with CUDA enabled
 
