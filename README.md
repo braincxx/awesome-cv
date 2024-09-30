@@ -5,11 +5,11 @@ This section contains instructions for building OpenCV with CUDA support in a Mi
 
 ### Requirements
 
-- Miniconda installed on your system.
+- Miniconda installed on your system. ([how to install Miniconda](https://docs.anaconda.com/miniconda/#quick-command-line-install))
 - CUDA-compatible NVIDIA GPU and CUDA toolkit installed.
 - Build tools (CMake) installed.
 
-### [How to install Miniconda?](https://docs.anaconda.com/miniconda/#quick-command-line-install)
+### 
 
 ### Steps to Build OpenCV with CUDA Support for Miniconda
 
